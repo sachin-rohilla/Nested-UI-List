@@ -19,12 +19,13 @@ function App() {
           {NestedData?.length > 0 &&
             NestedData?.map((deptItem) => (
               <div key={deptItem?.deptId}>
-                <div className="w-44 h-42 overflow-y-auto border rounded-sm  shadow-md ">
+                <div className="w-44 h-42 overflow-y-auto border rounded-sm  ">
                   <h1
                     onClick={() => {
                       setShowCategoryList(true);
                       setDepartmentId(deptItem?.deptId);
                       setShowSubCategoryList(false);
+                      setCategoryId(null);
                     }}
                     className={`hover:bg-yellow-400 hover:text-white px-4 py-2  cursor-pointer ${
                       depmartMentId === deptItem?.deptId
@@ -45,12 +46,13 @@ function App() {
                       )
                       ?.map((catItem) => (
                         <div key={catItem?.catId}>
-                          <div className="w-44 h-42 overflow-y-auto border rounded-sm shadow-md   ">
+                          <div className="w-44 h-42 overflow-y-auto border rounded-sm    ">
                             <h1
                               onClick={() => {
                                 setShowSubCategoryList(true);
                                 setCategoryId(catItem?.catId);
                                 setShowSubCategoryImage(false);
+                                setSubCategoryId(null);
                               }}
                               className={`hover:bg-yellow-400 hover:text-white px-4 py-2  cursor-pointer
                               ${
@@ -75,7 +77,7 @@ function App() {
                                 )
                                 ?.map((subCatItem) => (
                                   <div key={subCatItem?.subId}>
-                                    <div className="w-44 h-42 overflow-y-auto border rounded-sm shadow-md   ">
+                                    <div className="w-44 h-42 overflow-y-auto border rounded-sm    ">
                                       <h1
                                         className={`hover:bg-yellow-400 hover:text-white px-4 py-2  cursor-pointer 
                                             ${
