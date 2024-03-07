@@ -28,12 +28,12 @@ export const NestedData = [
           {
             catId: 2,
             subId: 1,
-            subCategoryName: "T-Shirts",
+            subCategoryName: "Tops",
           },
           {
             catId: 2,
             subId: 2,
-            subCategoryName: "Trousers",
+            subCategoryName: "Jeans",
           },
         ],
       },
