@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <div className="px-16 py-8 mx-auto ">
+      <div className="px-16 py-8 mx-auto">
         <h1 className="py-4 font-semibold text-xl ">Nested Menu UI List</h1>
         <div className="relative">
           {NestedData?.length > 0 &&
