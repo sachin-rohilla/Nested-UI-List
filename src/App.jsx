@@ -1,14 +1,19 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
+import { NestedData } from "./constants/constants";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>hello world</h1>
+      <div className="w-44 h-42 border rounded-sm  ">
+        {NestedData?.length > 0 &&
+          NestedData?.map((item) => (
+            <h1 className=" hover:bg-yellow-400 hover:text-white px-4 py-2 border-b cursor-pointer">
+              {item?.departmentName}
+            </h1>
+          ))}
+      </div>
     </>
   );
 }
