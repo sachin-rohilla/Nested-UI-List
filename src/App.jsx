@@ -96,15 +96,19 @@ function App() {
                                     {/* subcategorylist start */}
                                     {showSubCategoryImage &&
                                       subCatItem?.subId === subCategoryId && (
-                                        <div className=" absolute top-0 left-48 w-52 h-52 border rounded shadow-md">
+                                        <div className=" flex items-center justify-center overflow-hidden  absolute top-0 left-48 w-52 h-52 border rounded shadow-md">
                                           {subCatItem?.subCategoryImage ? (
                                             <img
                                               src={subCatItem?.subCategoryImage}
                                               alt="subCategoryImage"
+                                              className="object-cover"
                                             />
                                           ) : (
                                             <>
-                                              <img src="https://media.istockphoto.com/id/1392182937/vector/no-image-available-photo-coming-soon.jpg?s=612x612&w=0&k=20&c=3vGh4yj0O2b4tPtjpK-q-Qg0wGHsjseL2HT-pIyJiuc=" />
+                                              <img
+                                                className="object-cover"
+                                                src="https://media.istockphoto.com/id/1392182937/vector/no-image-available-photo-coming-soon.jpg?s=612x612&w=0&k=20&c=3vGh4yj0O2b4tPtjpK-q-Qg0wGHsjseL2HT-pIyJiuc="
+                                              />
                                             </>
                                           )}
                                         </div>
